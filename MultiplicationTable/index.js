@@ -5,6 +5,7 @@ let ul = document.getElementById('ul');
 
 function tableGenerator(){
     
+    ul.innerHTML = "";
     let num = numberInput.value;
 
     let i = 1;
@@ -16,6 +17,7 @@ function tableGenerator(){
         let list = document.createElement('li');
         list.textContent = num + " * " + j + " = " + table;
         ul.appendChild(list);
+        numberInput.value= "";
     }
 }
 function clearField(){
